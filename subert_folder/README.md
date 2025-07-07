@@ -11,20 +11,20 @@ The goal was to distinguish between forged and genuine banknotes using statistic
 - Engineered features like `skewness + kurtosis` and `variance` for better separability
 - Benchmarked 2 clustering models, HDBSCAN and GMM
 - Gaussian Mixture Models (GMM) achieved the best performance with an NMI of **0.8692**
-- Visualized Gaussian ellipses to interpret cluster shapes and confidence
+- Visualized Gaussian ellipses to interpret cluster shapes and confidence (it's in the notebook)
 
 ### 🏆 GMM Clustering Results
 
 <p align="center">
-  <img src="subert_folder/imgs/correlation_matrix.png" width="50%" />
-  <img src="subert_folder/imgs/feature_engineered_plot.png" width="40%" />
-  <img src="subert_folder/imgs/gmm_versus_truthlabels.png" width="100%" />
+  <img src="imgs/correlation_matrix.png" width="36.8%" />
+  <img src="imgs/feature_engineered_plot.png" width="50%" />
+  <img src="imgs/gmm_versus_truthlabels.png" width="100%" />
 </p>
 
-From left to right:
-1. GMM cluster assignments  
-2. Ground truth labels  
-3. GMM Gaussian ellipses showing cluster shape and orientation
+Left to Right, Top to Bottom:
+1. Correlation Matrix of the original features,
+2. The dataset after feature engineering, lastly
+3. The results of the GMM model versus the truth labels.
 
 ### 📁 Files
 
