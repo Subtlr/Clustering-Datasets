@@ -16,9 +16,9 @@ The goal was to distinguish between forged and genuine banknotes using statistic
 ### 🏆 GMM Clustering Results
 
 <p align="center">
-  <img src="subert_folder/imgs/gmm_clusters.png" width="30%" />
-  <img src="subert_folder/imgs/ground_truth.png" width="30%" />
-  <img src="subert_folder/imgs/ellipses.png" width="30%" />
+  <img src="subert_folder/imgs/correlation_matrix.png" width="50%" />
+  <img src="subert_folder/imgs/feature_engineered_plot.png" width="40%" />
+  <img src="subert_folder/imgs/gmm_versus_truthlabels.png" width="100%" />
 </p>
 
 From left to right:
