@@ -1,7 +1,7 @@
 # <p align="center">subert_folder</p>
 Hello, welcome to the folder full of my attempts on clustering the datasets provided by this repository!
 
-## 1. 🧠 Banknote Authentication with Gaussian Mixture Models ([banknote_sW.ipynb](https://github.com/Subtlr/Clustering-Datasets/blob/master/subert_folder/banknote_sW.ipynb))
+## 1. 🧠 [Banknote Authentication with Gaussian Mixture Models](https://github.com/Subtlr/Clustering-Datasets/blob/master/subert_folder/banknote_sW.ipynb)
 
 This notebook explores unsupervised clustering techniques on the [Banknote Authentication dataset](https://archive.ics.uci.edu/ml/datasets/banknote+authentication).  
 The goal was to distinguish between forged and genuine banknotes using statistical features — without using the labels during training.
