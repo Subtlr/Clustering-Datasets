@@ -102,3 +102,68 @@ This notebook dives into the [Glass Identification dataset](https://github.com/S
 
 > This honestly made me realize that the world is not all sunshine and rainbows...
 > - Subert
+
+## 3. 🍷 [Wine Dataset – Clustering & Chemical Composition Analysis](https://github.com/Subtlr/Clustering-Datasets/blob/master/subert_folder/wine_sW.ipynb)
+
+This notebook explores the [Wine dataset](https://github.com/milaan9/Clustering-Datasets/blob/master/01.%20UCI/wine.arff), where the goal is to uncover natural groupings based on **chemical features** alone without relying on wine type labels during clustering.
+
+> Spoiler: even if the clusters didn’t pour cleanly, the flavor profiles they revealed were anything but bland.
+
+<p align="center">
+  <img src="https://github.com/Subtlr/Clustering-Datasets/blob/master/subert_folder/imgs/wine_average_features_heatmap.png" width="80%" />
+</p>
+
+### 🧠 Project Highlights
+- Explored clustering models: GMM, Spectral Clustering, and MiniBatch KMeans
+
+<p align="center">
+  <img src="https://github.com/Subtlr/Clustering-Datasets/blob/master/subert_folder/imgs/wine_gmm_pairplot.png" width="80%" />
+</p>
+
+- Used Silhouette, Davies-Bouldin, Calinski-Harabasz, and NMI for rigorous evaluation
+- Generated heatmaps comparing GMM clusters to truth centroids using cosine similarity
+
+<p align="center">
+  <img src="https://github.com/Subtlr/Clustering-Datasets/blob/master/subert_folder/imgs/wine_cosine_similarity.png" width="80%" />
+</p>
+
+- Interpreted standardized chemical compositions across clusters with visual fingerprinting
+
+<p align="center">
+  <img src="https://github.com/Subtlr/Clustering-Datasets/blob/master/subert_folder/imgs/wine_cluster_comparison.png" width="80%" />
+</p>
+
+### 🔬 Cluster Interpretation from Feature Profiles
+Based on standardized means across chemical features:
+
+- **Cluster 1**: High alcohol, magnesium, and proanthocyanins → likely full-bodied wines with rich structure and vibrant intensity.
+- **Cluster 2**: Elevated malic acid and ash, moderate magnesium → hints at wines with pronounced acidity and mineral-driven profiles.
+- **Cluster 3**: High flavanoids, lower magnesium, and strong phenolic signature → suggesting bold reds with aromatic complexity and aging potential.
+
+### 📊 Clustering Performance Metrics on the Wine Dataset
+
+| **Model**                     | **NMI ↑**   | **ARI ↑**   | **Homogeneity ↑** | **Completeness ↑** | **V-Measure ↑** | **Silhouette ↑** | **Davies-Bouldin ↓** | **Calinski-Harabasz ↑** |
+|------------------------------|-------------|-------------|--------------------|---------------------|------------------|-------------------|------------------------|---------------------------|
+| **Spectral Clustering**       | 0.0111      | 0.0004      | 0.0057             | 0.1796              | 0.0111           | 0.2803            | 0.4477                 | 3.3691                    |
+| **Gaussian Mixture Model**    | **0.5823**  | **0.6075**  | **0.5849**         | **0.5798**          | **0.5823**       | 0.2833            | 0.8400                 | 181.2005                  |
+| **HDBSCAN (min_cluster_size=5)** | 0.3942      | 0.2970      | 0.4051             | 0.3838              | 0.3942           | 0.4185            | 2.6880                 | 147.0661                  |
+| **KMeans**                    | 0.4288      | 0.3711      | 0.4288             | 0.4287              | 0.4288           | **0.5711**        | 0.5342                 | **561.8157**              |
+| **OPTICS**                    | 0.2847      | 0.0894      | 0.4305             | 0.2126              | 0.2847           | 0.0877            | **3.7888**             | 45.1746                   |
+| **Affinity Propagation**      | 0.3497      | 0.1905      | 0.4957             | 0.2701              | 0.3497           | 0.5352            | 0.4994                 | **1282.2753**             |
+
+> Models were evaluated on clustering alignment (NMI, ARI, V-Measure), geometric cohesion (Silhouette, DB score), and compactness (Calinski-Harabasz).  
+> GMM emerged as the most balanced performer across label-alignment and structural integrity metrics.
+
+### 📁 Files
+
+- `subert_folder/wine_sW.ipynb`: Full notebook including preprocessing, clustering, evaluation, and interpretation
+- `subert_folder/imgs/`: Contains visualizations like heatmaps and metrics across cluster models
+
+### 🍇 Bonus Takeaways
+- Chemical clustering doesn’t always follow traditional wine categories,but flavor patterns emerge nonetheless
+- GMM and Spectral Clustering revealed nuanced distinctions in phenolic content, acidity, and alcohol levels
+- Clustering taught me that wine isn't just fermented grapes, it's chemistry, personality, and mystery in a bottle
+
+> Some clusters spark joy. Others… taste like regret.  
+> – Subert
+
