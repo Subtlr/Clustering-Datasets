@@ -134,11 +134,43 @@ This notebook explores the [Wine dataset](https://github.com/milaan9/Clustering-
 </p>
 
 ### 🔬 Cluster Interpretation from Feature Profiles
-Based on standardized means across chemical features:
 
-- **Cluster 1**: High alcohol, magnesium, and proanthocyanins → likely full-bodied wines with rich structure and vibrant intensity.
-- **Cluster 2**: Elevated malic acid and ash, moderate magnesium → hints at wines with pronounced acidity and mineral-driven profiles.
-- **Cluster 3**: High flavanoids, lower magnesium, and strong phenolic signature → suggesting bold reds with aromatic complexity and aging potential.
+#### 🧪 Cluster 0 Interpretation
+- **Truth Cluster Mean Highlights**:
+  - 🟡 High in alcohol, magnesium, total phenols, flavanoids, proanthocyanins, and proline.
+  - 🔵 Low in malic acid, alcalinity_of_ash, and nonflavanoid phenols.
+- **GMM Cluster Mean Highlights**:
+  - Matches truth fairly well in most features: alcohol slightly higher, magnesium a bit lower, total phenols and proanthocyanins even stronger.
+  - Very close profile overall — phenolic fingerprint suggests robust wine types with bold flavors and good aging structure.
+
+🔍 **Interpretation**: Likely represents classic, full-bodied red wines with strong antioxidant profiles and consistent chemical signatures.
+
+---
+
+#### 🍃 Cluster 1 Interpretation
+- **Truth Cluster Mean Highlights**:
+  - 🔵 Strongly low in alcohol, ash, magnesium, color intensity, proline.
+  - 🟡 Modestly elevated alcalinity_of_ash and hue.
+- **GMM Cluster Mean Highlights**:
+  - Accurately captures low alcohol and ash.
+  - Overestimates alcalinity_of_ash and underestimates hue.
+  - Shows lower total phenols and proanthocyanins than truth.
+
+🔍 **Interpretation**: Suggests wines with lighter body and reduced aromatic complexity — potentially more acidic or mineral-forward types. GMM exaggerates the alkalinity, which might skew predicted character toward sharper taste profiles.
+
+---
+
+#### 🍷 Cluster 2 Interpretation
+- **Truth Cluster Mean Highlights**:
+  - 🟡 Very high in malic acid, alcalinity_of_ash, nonflavanoid phenols, and color intensity.
+  - 🔵 Strongly low in phenolics, hue, and od280/od315.
+- **GMM Cluster Mean Highlights**:
+  - Malic acid and color intensity are well aligned.
+  - Alcalinity is underestimated; magnesium notably overestimated.
+  - Phenolics somewhat misrepresented.
+
+🔍 **Interpretation**: Likely indicative of highly acidic wines with mineral complexity and deeper color—but less aromatic depth. GMM partly misrepresents the phenolic profile, possibly confusing this with a richer style than truth supports.
+
 
 ### 📊 Clustering Performance Metrics on the Wine Dataset
 
