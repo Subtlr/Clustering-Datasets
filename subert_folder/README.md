@@ -141,7 +141,7 @@ This notebook explores the [Wine dataset](https://github.com/milaan9/Clustering-
   - 🔵 Low in malic acid, alcalinity_of_ash, and nonflavanoid phenols.
 - **GMM Cluster Mean Highlights**:
   - Matches truth fairly well in most features: alcohol slightly higher, magnesium a bit lower, total phenols and proanthocyanins even stronger.
-  - Very close profile overall — phenolic fingerprint suggests robust wine types with bold flavors and good aging structure.
+  - Very close profile overall, phenolic fingerprint suggests robust wine types with bold flavors and good aging structure.
 
 🔍 **Interpretation**: Likely represents classic, full-bodied red wines with strong antioxidant profiles and consistent chemical signatures.
 
@@ -156,7 +156,7 @@ This notebook explores the [Wine dataset](https://github.com/milaan9/Clustering-
   - Overestimates alcalinity_of_ash and underestimates hue.
   - Shows lower total phenols and proanthocyanins than truth.
 
-🔍 **Interpretation**: Suggests wines with lighter body and reduced aromatic complexity — potentially more acidic or mineral-forward types. GMM exaggerates the alkalinity, which might skew predicted character toward sharper taste profiles.
+🔍 **Interpretation**: Suggests wines with lighter body and reduced aromatic complexity, potentially more acidic or mineral-forward types. GMM exaggerates the alkalinity, which might skew predicted character toward sharper taste profiles.
 
 ---
 
@@ -169,7 +169,7 @@ This notebook explores the [Wine dataset](https://github.com/milaan9/Clustering-
   - Alcalinity is underestimated; magnesium notably overestimated.
   - Phenolics somewhat misrepresented.
 
-🔍 **Interpretation**: Likely indicative of highly acidic wines with mineral complexity and deeper color—but less aromatic depth. GMM partly misrepresents the phenolic profile, possibly confusing this with a richer style than truth supports.
+🔍 **Interpretation**: Likely indicative of highly acidic wines with mineral complexity and deeper color but less aromatic depth. GMM partly misrepresents the phenolic profile, possibly confusing this with a richer style than truth supports.
 
 
 ### 📊 Clustering Performance Metrics on the Wine Dataset
